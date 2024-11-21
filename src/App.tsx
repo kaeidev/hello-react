@@ -18,6 +18,7 @@ function App() {
           alt="React logo"
           isReact
         />
+        123
       </div>
       <Body
         count={count}
