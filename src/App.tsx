@@ -11,17 +11,12 @@ function App() {
   return (
     <>
       <div>
-        <Logo
-          src={viteLogo}
-          url="https://vite.dev"
-          alt="Vite logo"
-          className="logo"
-        />
+        <Logo src={viteLogo} url="https://vite.dev" alt="Vite logo" />
         <Logo
           src={reactLogo}
           url="https://react.dev"
           alt="React logo"
-          className="logo react"
+          isReact
         />
       </div>
       <Body
