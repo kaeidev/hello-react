@@ -1,4 +1,5 @@
 import { Search } from "../components/Search";
+import { Lists } from "../components/Lists";
 import { useState } from "react";
 export const Todo = () => {
   const [keywords, setKeywords] = useState<null | string>(null);
@@ -11,6 +12,7 @@ export const Todo = () => {
           setKeywords(val);
         }}
       />
+      <Lists />
     </>
   );
 };
