@@ -7,7 +7,6 @@ import { Todo } from "./pages/Todo";
 function App() {
   return (
     <>
-      <div className="bg-red-400">1234142343215</div>
       <Tabs />
       <Routes>
         <Route index element={<Home />} />
