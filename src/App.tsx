@@ -4,6 +4,10 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { Logo } from "./components/Logo";
 import { Body } from "./components/Body";
+import { Routes, Route } from "react-router";
+
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +27,16 @@ function App() {
         count={count}
         onButtonClick={() => setCount((count) => count + 1)}
       />
+
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+
+        {/* <Route element={<AuthLayout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Route> */}
+      </Routes>
     </>
   );
 }
