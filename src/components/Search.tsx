@@ -1,7 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export const Search = () => {
+type Props = {
+  onChange: (value: string) => void;
+};
+
+export const Search = (props: Props) => {
+  const { onChange } = props;
   const [value, setValue] = useState("");
+
+  useEffect(() => {
+    onChange(value);
+  }, [onChange, value]);
+
   return (
     <div>
       <input
