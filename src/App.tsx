@@ -1,36 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { Logo } from "./components/Logo";
-import { Body } from "./components/Body";
 import { Routes, Route } from "react-router";
 
+import { Tabs } from "./components/Tabs";
 import { Home } from "./pages/Home";
-import { About } from "./pages/About";
+import { Todo } from "./pages/Todo";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <Logo src={viteLogo} url="https://vite.dev" alt="Vite logo" />
-        <Logo
-          src={reactLogo}
-          url="https://react.dev"
-          alt="React logo"
-          isReact
-        />
-      </div>
-      <Body
-        count={count}
-        onButtonClick={() => setCount((count) => count + 1)}
-      />
-
+      <Tabs />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="todo" element={<Todo />} />
 
         {/* <Route element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
